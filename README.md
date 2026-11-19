@@ -1,18 +1,14 @@
 # Mini Shell (msh)
-
 **Student Name:** INDAKWA PAULINE APPHIE
 **Student ID:** SCT212-0062/2024
 **Unit:** ICS 2305 – Systems Programming
 **Programming Language:** C
-
 ## 1. Project Description
-
 This project implements a simple command-line shell called **Mini Shell (msh)** using the C programming language. The shell accepts user commands, executes external programs, supports built-in commands, handles background processes, and provides basic output redirection.
 
 The implementation demonstrates fundamental operating system concepts, particularly process creation, program execution, process synchronization, and signal handling.
 
 ## 2. Building and Running the Program
-
 ### Requirements
 
 - Ubuntu/Linux environment
@@ -43,8 +39,7 @@ gcc -Wall -Wextra -std=c11 -o msh msh.c
 make clean
 ```
 
-## 3. Implementation Checklist
-
+## 3. Implementation 
 The following table summarizes the implementation of the eight practical tasks.
 
 - [x] **Task 1: Shell prompt and input** – Displays the shell prompt, accepts user input using `getline()`, and exits cleanly when Ctrl+D is pressed.
@@ -69,7 +64,6 @@ The `cd` and `exit` commands are implemented as built-ins because they must affe
 Background processes are handled without making the shell wait for them immediately. The shell periodically checks completed background children using `waitpid()` with the `WNOHANG` option. This allows it to collect their termination statuses without blocking, helping prevent completed background processes from remaining as zombies.
 
 ## 5. Known Limitations
-
 Known limitations include:
 
 - Quoted arguments containing spaces are not fully supported.
@@ -80,7 +74,6 @@ Known limitations include:
 - Output redirection supports the basic `>` operator.
 
 ## 6. Sources and References
-
 The following resources were used as references during the development and understanding of the project:
 
 - Linux manual pages: `fork(2)`, `execvp(3)`, `waitpid(2)`, `getline(3)`, `dup2(2)`, and `open(2)`.
