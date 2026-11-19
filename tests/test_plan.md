@@ -16,7 +16,7 @@ The purpose of this test plan is to verify that the Mini Shell performs the requ
 |---|---|---|---|---|
 | 1 | Press Enter without typing a command | A new prompt appears without an error | Tested successfully; a new prompt appeared | PASS |
 | 2 | `echo hello world` | Displays the text and returns status 0 | Tested successfully; displayed `hello world` | PASS |
-| 3 | `ls /nonexistent` | Displays an error from ls and returns a non-zero status | Tested successfully; ls displayed a missing directory error and shell continued to 2 | |
+| 3 | `ls /nonexistent` | Displays an error from ls and returns a non-zero status | Tested successfully; ls displayed a missing directory error and shell continued to 2 |PASS |
 | 4 | `nosuchcommand` | Displays an error message and returns status 127 | Tested successfully; error displayed and shell continued | PASS |
 | 5 | `cd /tmp` followed by `pwd` | Displays `/tmp` | Tested successfully; displayed `/tmp` | PASS |
 | 6 | `sleep 3 &` | Returns the prompt immediately and displays the process ID | Tested successfully; process ID displayed and shell returned to prompt | PASS |
@@ -29,8 +29,8 @@ The purpose of this test plan is to verify that the Mini Shell performs the requ
 | No. | Test Input | Expected Behaviour | Actual Result | Status |
 |---|---|---|---|---|
 | 10 | `help` | Displays available built-in commands | Tested successfully; help information displayed | PASS |
-| 11 | `cd` followed by `pwd` | Changes to the user's home directory | Tested successfully; cd without argument changed to home directory | |
-| 12 | `echo first > f.txt` followed by `echo second > f.txt` and `cat f.txt` | Replaces the previous file contents with `second` | Tested successfully; the second command replaced the previous file contents.second was displayed | |
+| 11 | `cd` followed by `pwd` | Changes to the user's home directory | Tested successfully; cd without argument changed to home directory |PASS |
+| 12 | `echo first > f.txt` followed by `echo second > f.txt` and `cat f.txt` | Replaces the previous file contents with `second` | Tested successfully; the second command replaced the previous file contents with "second" |PASS |
 
 ## 4. Testing Summary
 
