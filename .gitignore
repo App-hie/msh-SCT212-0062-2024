@@ -1,0 +1,5 @@
+
+msh
+*.o
+*.out
+core
