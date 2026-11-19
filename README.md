@@ -42,14 +42,14 @@ make clean
 ## 3. Implementation 
 The following table summarizes the implementation of the eight practical tasks.
 
-- [x] **Task 1: Shell prompt and input** – Displays the shell prompt, accepts user input using `getline()`, and exits cleanly when Ctrl+D is pressed.
-- [x] **Task 2: Command tokenization** – Uses `strtok()` to separate commands and arguments using spaces and tabs. Empty input is ignored, and the argument list ends with `NULL`.
-- [x] **Task 3: External command execution** – Uses `fork()`, `execvp()`, and `waitpid()` to execute external commands and handle execution errors.
-- [x] **Task 4: Built-in commands** – Implements `cd`, `help`, and `exit`.
-- [x] **Task 5: Exit status reporting** – Displays the previous command's exit status in the prompt and handles normal exits and signal termination.
-- [x] **Task 6: Background execution** – Supports commands ending with `&`, displays the background process ID, and checks for completed background processes without blocking.
-- [x] **Task 7: Output redirection** – Supports `>` to create or truncate a file and redirect command output into it.
-- [x] **Task 8: Signal handling** – Handles Ctrl+C so that a foreground command can be interrupted without terminating the shell.
+-  **Task 1: Shell prompt and input** – Displays the shell prompt, accepts user input using `getline()`, and exits cleanly when Ctrl+D is pressed.
+-  **Task 2: Command tokenization** – Uses `strtok()` to separate commands and arguments using spaces and tabs. Empty input is ignored, and the argument list ends with `NULL`.
+-  **Task 3: External command execution** – Uses `fork()`, `execvp()`, and `waitpid()` to execute external commands and handle execution errors.
+-  **Task 4: Built-in commands** – Implements `cd`, `help`, and `exit`.
+- **Task 5: Exit status reporting** – Displays the previous command's exit status in the prompt and handles normal exits and signal termination.
+-  **Task 6: Background execution** – Supports commands ending with `&`, displays the background process ID, and checks for completed background processes without blocking.
+-  **Task 7: Output redirection** – Supports `>` to create or truncate a file and redirect command output into it.
+-  **Task 8: Signal handling** – Handles Ctrl+C so that a foreground command can be interrupted without terminating the shell.
 
 ## 4. Design and Implementation Explanation
 
@@ -65,9 +65,7 @@ Background processes are handled without making the shell wait for them immediat
 
 ## 5. Known Limitations
 Known limitations include:
-
 - Quoted arguments containing spaces are not fully supported.
-- Pipes (`|`) are not implemented.
 - Input redirection (`<`) and append redirection (`>>`) are not implemented.
 - Environment-variable expansion is not implemented.
 - Command history and tab completion are not implemented.
@@ -80,4 +78,4 @@ The following resources were used as references during the development and under
 - GNU C Library documentation.
 - Course practical instructions and learning materials.
 - Class notes on Linux processes, system calls, and command-line programming.
-ChatGPT was used as a learning tool to explain systems programming concepts, assist with understanding C system calls, and provide guidance during implementation, and testing.
+ChatGPT was used as a learning tool to explain systems programming concepts, assist with understanding C system calls, and provide guidance during implementation, and testing as well as editing documentation.
